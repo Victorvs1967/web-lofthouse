@@ -1,4 +1,3 @@
-import { burgerMenu } from './include/navbar.js';
 import { sendMsg, gallery, carousell } from "./include/func.js";
 
 // send email from formspree.io service with ajax
@@ -9,5 +8,3 @@ import { sendMsg, gallery, carousell } from "./include/func.js";
 
 // slider with Fancybox framework
 // carousell();
-
-// burgerMenu();
