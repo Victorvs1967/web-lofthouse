@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Victor Smirnov",
+    "birth": "27-01-1967",
+    "tagline": "Go to the sunrise aheed...",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dolorum ex nisi rerum facilis suscipit veritatis blanditiis neque nemo commodi labore pariatur maiores quisquam, eaque magni ipsum eos eveniet? Excepturi, exercitationem dolor?"
+  },
+  {
+    "name": "John Smith",
+    "birth": "01-01-1990",
+    "tagline": "Go to the sunrise aheed...",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dolorum ex nisi rerum facilis suscipit veritatis blanditiis neque nemo commodi labore pariatur maiores quisquam, eaque magni ipsum eos eveniet? Excepturi, exercitationem dolor?"
+  },
+  {
+    "name": "Jane Dow",
+    "birth": "01-02-1995",
+    "tagline": "Go to the sunrise aheed...",
+    "bio": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, dolorum ex nisi rerum facilis suscipit veritatis blanditiis neque nemo commodi labore pariatur maiores quisquam, eaque magni ipsum eos eveniet? Excepturi, exercitationem dolor?"
+  }
+]

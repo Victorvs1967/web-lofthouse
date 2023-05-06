@@ -1,0 +1,33 @@
+include ./_mixins
+
+footer.footer
+  .footer_wrapper.container
+    .footer__icons
+      .logo Logo
+      .footer__icons_socials
+        a(href="#!").social-link
+          +svg-icon('facebook').social_icon
+        a(href="#!").social-link
+          +svg-icon('instagram').social_icon
+        a(href="#!").social-link
+          +svg-icon('linkedin').social_icon
+    .footer__nav
+      ul.footer__nav_menu
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link About us
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Blog
+      ul.footer__nav_menu
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Legal
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Privacy Policy
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Terms and conditions
+      ul.footer__nav_menu
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Help
+        li.footer__nav_menu-item
+          a(href="#!").footer__nav_menu-link Contact us
+  .footer__text.container
+    p.footer__text-content &copy; Victor Smirnov. All Right Reserve. 2023

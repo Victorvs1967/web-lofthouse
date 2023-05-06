@@ -1,0 +1,71 @@
+@use './base'
+@import ../include/vars
+
+@media (max-width: $burgerBreakpoint)
+  .menu
+    height: 100vh
+    width: 100vw
+    display: none
+    position: fixed
+    left: 0
+    top: 0
+    background: $burgerColor
+    &.active
+      height: 100vh
+      width: 100vw
+      left: 0
+      top: 0
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      pointer-events: all
+      z-index: 2
+      animation: fade 0.1s linear
+    &__item
+      &-link
+        color: $burgerActiveColor
+        transition: 0.3s color
+        &:hover
+          font-weight: 500
+          color: $burgerActiveColor
+
+  .burger
+    width: 3rem
+    height: 2rem
+    display: flex
+    position: relative
+    &.active
+      &::before
+        background: $burgerActiveColor
+        transform: rotate(45deg)
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all
+        top: 8px
+      &::after
+        background: $burgerActiveColor
+        transform: rotate(45deg)
+        transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) 0.3s all
+        top: 10px
+
+@media (max-width: $breakpoint1450)
+  .container
+    max-width: 1200px
+
+@media (max-width: $breakpoint1200)
+  .container
+    max-width: 1160px
+  nav
+    .menu
+      gap: 2rem
+
+@media (max-width: $breakpoint992)
+  .container
+    max-width: 970px
+
+@media (max-width: $breakpoint768)
+  .container
+    max-width: 768px
+
+@media (max-width: $breakpoint480)
+  .container
+    max-width: none
