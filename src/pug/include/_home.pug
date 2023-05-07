@@ -2,6 +2,7 @@ include ./_mixins
 
 main.main
   .container
+
     section.benefits#benefits
       figure.benefits__item
         +svg-icon('bench').benefits__item-icon
@@ -15,23 +16,28 @@ main.main
       figure.benefits__item
         +svg-icon('bicycle').benefits__item-icon
         figcaption.benefits__item-desc 6 км<br/>велодорожек
+
     section.apartments
       h2.apartments__title Наши квартиры
       .apartments__gallery
-      a(href="#!")
-        figure.apartments__gallery-card
-          img(src="@img/image-01.png", alt="gallery image").apartments__gallery-image
-          figcaption.apartments__gallery-desc Пентхаус “Loft Олимп”
-        figure.apartments__gallery-card
-          img(src="@img/image-02.png", alt="gallery image").apartments__gallery-image
-          figcaption.apartments__gallery-desc Апартаменты “Nice Loft”
-        figure.apartments__gallery-card
-          img(src="@img/image-03.jpeg", alt="gallery image").apartments__gallery-image
-          figcaption.apartments__gallery-desc Апартаменты “Loft Studio”
-        figure.apartments__gallery-card
-          img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
-          figcaption.apartments__gallery-desc Loft квартира “Престиж”
+        a(href="#!")
+          figure.apartments__gallery-card
+            img(src="@img/image-01.png", alt="gallery image").apartments__gallery-image.img-01
+            figcaption.apartments__gallery-desc Пентхаус “Loft Олимп”
+        a(href="#!")
+          figure.apartments__gallery-card
+            img(src="@img/image-02.png", alt="gallery image").apartments__gallery-image.img-02
+            figcaption.apartments__gallery-desc Апартаменты “Nice Loft”
+        a(href="#!")
+          figure.apartments__gallery-card
+            img(src="@img/image-03.jpeg", alt="gallery image").apartments__gallery-image
+            figcaption.apartments__gallery-desc Апартаменты “Loft Studio”
+        a(href="#!")
+          figure.apartments__gallery-card
+            img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
+            figcaption.apartments__gallery-desc Loft квартира “Престиж”
 
+    section.request
 
 
 

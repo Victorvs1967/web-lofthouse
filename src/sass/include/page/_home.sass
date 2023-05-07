@@ -31,13 +31,37 @@
         padding-bottom: 8.8rem
       &__gallery
         display: grid
-        grid-template-columns: 1fr 1fr
+        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr))
         gap: 3rem
         &-card
-          max-width: 54rem
           height: 32rem
+          display: block
           position: relative
           overflow: hidden
+          color: $white
+          &:hover
+            color: $white
+          &::after
+            content: ""
+            position: absolute
+            top: 1.5rem
+            left: 1.5rem
+            bottom: 1.5rem
+            right: 1.5rem
+            border: 3px double $white
+            opacity: 0
+            z-index: 8
+            transition: .3s opacity ease-in
+          &:hover::after
+            opacity: .5
+          &:hover
+            img
+              transform: scale(1.1)
+              filter: contrast(1.1) brightness(1.2) saturate(1.2)
+            .img-01
+              transform: translateY(-30%) scale(1.1)
+            .img-02
+              transform: translateY(-45%) scale(1.1)
           &::before
             content: ""
             position: absolute
@@ -46,10 +70,19 @@
             width: 100%
             height: 100%
             background: $main-gradiend
+            z-index: 7
         &-image
           max-width: 100%
+          position: relative
+          z-index: 5
+          transition: .3s all ease-in
+          &.img-01
+            transform: translateY(-30%)
+          &.img-02
+            transform: translateY(-45%)
         &-desc
           position: absolute
           bottom: 4.4rem
           left: 5rem
           font-size: 2.4rem
+          z-index: 10
