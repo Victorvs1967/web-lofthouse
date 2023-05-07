@@ -1,88 +1,142 @@
 @import ../vars
 
 .main
-  .container
-    padding-bottom: 18rem
-    .benefits
-      max-width: 84rem
-      margin: 0 auto
-      padding: 12rem 0
-      display: flex
-      gap: 7rem
-      &__item
-        display: flex
-        flex-direction: column
-        align-items: center
-        gap: 5.3rem
-        &-desc
-          font-family: $font-secondary
-          font-weight: 300
-          font-size: 2rem
-          line-height: 1.35
-          color: $white
-          text-align: center
-        &-icon
-          width: 8rem
-          height: 8rem
-          fill: $accent
+ .container
+  padding-bottom: 18rem
 
-    .apartments
-      &__title
-        padding-bottom: 8.8rem
-      &__gallery
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr))
-        gap: 3rem
-        &-card
-          height: 32rem
-          display: block
-          position: relative
-          overflow: hidden
-          color: $white
-          &:hover
-            color: $white
-          &::after
-            content: ""
-            position: absolute
-            top: 1.5rem
-            left: 1.5rem
-            bottom: 1.5rem
-            right: 1.5rem
-            border: 3px double $white
-            opacity: 0
-            z-index: 8
-            transition: .3s opacity ease-in
-          &:hover::after
-            opacity: .5
-          &:hover
-            img
-              transform: scale(1.1)
-              filter: contrast(1.1) brightness(1.2) saturate(1.2)
-            .img-01
-              transform: translateY(-30%) scale(1.1)
-            .img-02
-              transform: translateY(-45%) scale(1.1)
-          &::before
-            content: ""
-            position: absolute
-            top: 0
-            left: 0
-            width: 100%
-            height: 100%
-            background: $main-gradiend
-            z-index: 7
-        &-image
-          max-width: 100%
-          position: relative
-          z-index: 5
-          transition: .3s all ease-in
-          &.img-01
-            transform: translateY(-30%)
-          &.img-02
-            transform: translateY(-45%)
-        &-desc
-          position: absolute
-          bottom: 4.4rem
-          left: 5rem
-          font-size: 2.4rem
-          z-index: 10
+  .benefits
+   max-width: 84rem
+   margin: 0 auto
+   padding: 12rem 0
+   display: flex
+   gap: 7rem
+
+   &__item
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 5.3rem
+
+    &-desc
+     font-family: $font-secondary
+     font-weight: 300
+     font-size: 2rem
+     line-height: 1.35
+     color: $white
+     text-align: center
+
+    &-icon
+     width: 8rem
+     height: 8rem
+     fill: $accent
+
+  .apartments
+   &__title
+    padding-bottom: 8.8rem
+
+   &__gallery
+    display: grid
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr))
+    gap: 3rem
+
+    &-card
+     height: 32rem
+     display: block
+     position: relative
+     overflow: hidden
+     color: $white
+
+     &:hover
+      color: $white
+
+     &::after
+      content: ""
+      position: absolute
+      top: 1.5rem
+      left: 1.5rem
+      bottom: 1.5rem
+      right: 1.5rem
+      border: 3px double $white
+      opacity: 0
+      z-index: 8
+      transition: 0.3s opacity ease-in
+
+     &:hover::after
+      opacity: 0.5
+
+     &:hover
+      img
+       transform: scale(1.1)
+       filter: contrast(1.1) brightness(1.2) saturate(1.2)
+
+      .img-01
+       transform: translateY(-30%) scale(1.1)
+
+      .img-02
+       transform: translateY(-45%) scale(1.1)
+
+     &::before
+      content: ""
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background: $main-gradiend
+      z-index: 7
+
+    &-image
+     max-width: 100%
+     position: relative
+     z-index: 5
+     transition: 0.3s all ease-in
+
+     &.img-01
+      transform: translateY(-30%)
+
+     &.img-02
+      transform: translateY(-45%)
+
+    &-desc
+     position: absolute
+     bottom: 4.4rem
+     left: 5rem
+     font-size: 2.4rem
+     z-index: 10
+
+ .request
+  height: 56rem
+  background: $request-gradients, url("@img/bg-image-02.jpeg"), #C4C4C4
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  .container
+    padding-top: 18rem
+    padding-bottom: 18rem
+  &__title
+    padding-bottom: 1.7rem
+  &__content
+    display: flex
+    justify-content: space-between
+    gap: 3rem
+    &-desc
+      flex: 1
+    &-form
+      max-width: 54rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: 3rem
+      input,
+      button
+        height: 5rem
+        font-size: 1.6rem
+      input::placeholder
+        text-align: center
+      button
+        background: $accent
+        color: $white
+        transition: .3s background ease-in
+        &:hover
+          background: #aa8800
+      span
+        font-size: 1.3rem
