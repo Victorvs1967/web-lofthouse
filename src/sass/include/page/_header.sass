@@ -1,1 +1,81 @@
 @import ../vars
+
+.header
+ min-height: 84rem
+ height: 100vh
+ position: relative
+ background-image: $header-gradient, url("@img/bg-image.jpeg")
+ background-size: cover
+ background-repeat: no-repeat
+ background-position: center
+
+ .container
+  height: 100%
+  padding-bottom: 7.4rem
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+ &__top
+  padding-top: 3rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &_logo
+   width: 13.4rem
+   height: 6.6rem
+   fill: $white
+   transition: 0.3s fill ease-in
+
+   &:hover
+    fill: $accent
+
+  &_nav
+   &_menu
+    display: flex
+    gap: 4rem
+
+    &_item
+     font-size: 1.4rem
+
+ &__title
+  &-text
+   position: relative
+   padding-bottom: 8rem
+   text-align: center
+
+  &-icon
+   position: absolute
+   left: 50%
+   transform: translateX(-50%)
+   width: 4rem
+   height: 4rem
+   fill: $accent
+
+ &__footer
+  display: grid
+  grid-template-columns: 1fr 1fr
+  gap: 10rem
+
+  &-item
+   display: flex
+   align-items: center
+   gap: 1.4rem
+   position: relative
+
+   &.left
+    justify-content: end
+
+   &:hover
+    .header__footer-icon
+     fill: $accent
+
+  &-text
+   font-size: 1.8rem
+
+  &-icon
+   width: 2.1rem
+   height: 2.1rem
+   fill: $white
+   transition: 0.3s fill ease-in

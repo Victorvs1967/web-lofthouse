@@ -1,23 +1,26 @@
 @use 'sass:math'
 
 // Container & Breakpoints
-$containerWidth: 1160
-$containerPadding: 80
-$containerSidePadding: math.div($containerPadding, 2)
+$container-width: 1160
+$container-padding: 80
+$container-side-padding: math.div($container-padding, 2)
 
-$breakpoint1450: 1449.98 + px // desktop xl
-$breakpoint1200: 1199.98 + px // desktop
-$breakpoint992: 991.98 + px // notebook
-$breakpoint768: 767.98 + px // tablet
-$breakpoint480: 479.98 + px // phone
+$breakpoint-1450: 1439.98 + px // desktop xl
+$breakpoint-1200: 1199.98 + px // desktop
+$breakpoint-992: 991.98 + px // notebook
+$breakpoint-768: 767.98 + px // tablet
+$breakpoint-480: 479.98 + px // phone
 
 // Colors
-$primary: #1D2736
-$primaryLight: #717A90
-$secondary: #F0998D
-$secondaryDark: #FD7461
+$dark: #242B33
+$accent: #D4C17F
+$white: #f0f0f0
+$black: #0f0f0f
+$header-gradient: linear-gradient(180deg, $dark 11.98%, rgba(45, 52, 60, 0.38) 51.04%, $dark 92.19%)
+$main-gradiend: linear-gradient(180deg, rgba(36, 43, 51, 0) 0%, $dark 90%)
+$footer-bg: #2D343C
 
 // Fonts
-$fontMain: "Poppins", sans-serif
-$fontSecondary: ''
-$fontAccent: ''
+$font-main: 'Raleway', sans-serif
+$font-secondary: 'Roboto', sans-serif
+$font-accent: 'Playfair Display', serif

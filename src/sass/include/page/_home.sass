@@ -1,1 +1,55 @@
 @import ../vars
+
+.main
+  .container
+    padding-bottom: 18rem
+    .benefits
+      max-width: 84rem
+      margin: 0 auto
+      padding: 12rem 0
+      display: flex
+      gap: 7rem
+      &__item
+        display: flex
+        flex-direction: column
+        align-items: center
+        gap: 5.3rem
+        &-desc
+          font-family: $font-secondary
+          font-weight: 300
+          font-size: 2rem
+          line-height: 1.35
+          color: $white
+          text-align: center
+        &-icon
+          width: 8rem
+          height: 8rem
+          fill: $accent
+
+    .apartments
+      &__title
+        padding-bottom: 8.8rem
+      &__gallery
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: 3rem
+        &-card
+          max-width: 54rem
+          height: 32rem
+          position: relative
+          overflow: hidden
+          &::before
+            content: ""
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: $main-gradiend
+        &-image
+          max-width: 100%
+        &-desc
+          position: absolute
+          bottom: 4.4rem
+          left: 5rem
+          font-size: 2.4rem

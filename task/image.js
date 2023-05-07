@@ -5,7 +5,7 @@ import gulpif from 'gulp-if';
 import app from '../config/app.js';
 
 const image = () =>
-  app.src([app.path.img.src, app.path.img.icons])
+  app.src(app.path.img.src)
     // Error handler
     .pipe(app.plumber({
       errorHandler: app.notify.onError(error => ({
