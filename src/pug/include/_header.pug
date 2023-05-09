@@ -1,21 +1,21 @@
 include ./_mixins
 
-header.header.hidden
+header.header#header
   .container
     .header__top
       a(href="#!") #[+svg-icon('logo').header__top_logo]
       nav.header__top_nav
         ul.header__top_nav_menu
-          li #[a(href="#!").header__top_nav_menu-item О комплексе]
-          li #[a(href="#!").header__top_nav_menu-item Район]
-          li #[a(href="#!").header__top_nav_menu-item Каталог квартир]
-          li #[a(href="#!").header__top_nav_menu-item Ипотека]
-          li #[a(href="#!").header__top_nav_menu-item Контакты]
+          li #[a(href="#video").header__top_nav_menu-item О комплексе]
+          li #[a(href="#map").header__top_nav_menu-item Район]
+          li #[a(href="#apartments").header__top_nav_menu-item Каталог квартир]
+          li #[a(href="#feedback").header__top_nav_menu-item Ипотека]
+          li #[a(href="#footer").header__top_nav_menu-item Контакты]
     .header__title
       h1.header__title-text Жилой комплекс<br/>в историческом центре
       a(href="#benefits") #[+svg-icon('mouse').header__title-icon]
     .header__footer
-      a(href="#!").header__footer-item.left
+      a(href="#map").header__footer-item.left
         +svg-icon('placeholder').header__footer-icon
         span.header__footer-text Наб. реки Фонтанки 10-15
       a(href="tel:88121234567").header__footer-item

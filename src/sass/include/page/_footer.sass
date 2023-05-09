@@ -1,1 +1,31 @@
 @import ../vars
+
+.footer
+  padding: 7.2rem 0 6rem 0
+  background: $footer-bg
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    gap: 2.2rem
+  &__logo
+    width: 13.4rem
+    height: 5.6rem
+    fill: $white
+    transition: .4s all ease-in
+    &:hover
+      fill: $accent
+  &__menu
+    &-item
+      padding-bottom: 1.5rem
+  &__socials
+    display: grid
+    grid-template-columns: repeat(4, 15%)
+    gap: 1rem
+  .icon-img
+    width: 3rem
+    height: 3rem
+    align-self: center
+    fill: $white
+    transition: .4s all ease-in
+    &:hover
+      fill: $accent

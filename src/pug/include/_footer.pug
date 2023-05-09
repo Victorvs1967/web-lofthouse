@@ -1,7 +1,28 @@
 include ./_mixins
 
-footer.footer
+footer.footer#footer
   .container
-
-
-  //- +svg-icon('vk').icon-img
+    .footer__wrapper
+      a(href="#header") #[+svg-icon('logo').footer__logo]
+      ul.footer__menu
+        li.footer__menu-item #[a(href="#video") О комплексе]
+        li.footer__menu-item #[a(href="#map") Район]
+        li.footer__menu-item #[a(href="#apartments") Каталог квартир]
+        li.footer__menu-item #[a(href="#feedback") Ипотека]
+        li.footer__menu-item #[a(href="#footer") Контакты]
+      ul.footer__menu
+        li.footer__menu-item #[a(href="#!") Поселение и переезд]
+        li.footer__menu-item #[a(href="#!") Сервисные услуги]
+        li.footer__menu-item #[a(href="#!") Экологическая устойчивость]
+        li.footer__menu-item #[a(href="#!") Инвестиционные возможности]
+        li.footer__menu-item #[a(href="#!") Программа лояльности]
+      ul.footer__contacts
+        li.footer__menu-item Адрес: #[a(href="#map") Наб. реки Фонтанки 10-15]
+        li.footer__menu-item Телефон: #[a(href="tel:88121234567") 8 (812) 123-45-67]
+        li.footer__menu-item Отдел продаж: 10:00-20:00
+        li.footer__menu-item E-mail: #[a(href="mailto:vip@lofthouse.ru") vip@lofthouse.ru]
+        .footer__socials
+          a(href="#!") #[+svg-icon('youtube').icon-img]
+          a(href="#!") #[+svg-icon('vk').icon-img]
+          a(href="#!") #[+svg-icon('facebook').icon-img]
+          a(href="#!") #[+svg-icon('instagram').icon-img]

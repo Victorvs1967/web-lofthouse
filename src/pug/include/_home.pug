@@ -1,49 +1,64 @@
 include ./_mixins
 
 main.main
-  .container.hidden
 
-    section.benefits#benefits
-      figure.benefits__item
-        +svg-icon('bench').benefits__item-icon
-        figcaption.benefits__item-desc Рядом исторические парки&nbsp;и&nbsp;скверы
-      figure.benefits__item
-        +svg-icon('building').benefits__item-icon
-        figcaption.benefits__item-desc Полностью обустроенный
-      figure.benefits__item
-        +svg-icon('fountain').benefits__item-icon
-        figcaption.benefits__item-desc 10 фонтанов на&nbsp;территории
-      figure.benefits__item
-        +svg-icon('bicycle').benefits__item-icon
-        figcaption.benefits__item-desc 6 км<br/>велодорожек
+  section.benefits#benefits.container
+    figure.benefits__item
+      +svg-icon('bench').benefits__item-icon
+      figcaption.benefits__item-desc Рядом исторические парки&nbsp;и&nbsp;скверы
+    figure.benefits__item
+      +svg-icon('building').benefits__item-icon
+      figcaption.benefits__item-desc Полностью обустроенный
+    figure.benefits__item
+      +svg-icon('fountain').benefits__item-icon
+      figcaption.benefits__item-desc 10 фонтанов на&nbsp;территории
+    figure.benefits__item
+      +svg-icon('bicycle').benefits__item-icon
+      figcaption.benefits__item-desc 6 км<br/>велодорожек
 
-    section.apartments
-      h2.apartments__title Наши квартиры
-      .apartments__gallery
-        a(href="#!")
-          figure.apartments__gallery-card
-            img(src="@img/image-01.png", alt="gallery image").apartments__gallery-image.img-01
-            figcaption.apartments__gallery-desc Пентхаус “Loft Олимп”
-        a(href="#!")
-          figure.apartments__gallery-card
-            img(src="@img/image-02.png", alt="gallery image").apartments__gallery-image.img-02
-            figcaption.apartments__gallery-desc Апартаменты “Nice Loft”
-        a(href="#!")
-          figure.apartments__gallery-card
-            img(src="@img/image-03.jpeg", alt="gallery image").apartments__gallery-image
-            figcaption.apartments__gallery-desc Апартаменты “Loft Studio”
-        a(href="#!")
-          figure.apartments__gallery-card
-            img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
-            figcaption.apartments__gallery-desc Loft квартира “Престиж”
+  section.apartments#apartments.container
+    h2.apartments__title Наши квартиры
+    .apartments__gallery
+      a(href="#!")
+        figure.apartments__gallery-card
+          img(src="@img/image-01.png", alt="gallery image").apartments__gallery-image.img-01
+          figcaption.apartments__gallery-desc Пентхаус “Loft Олимп”
+      a(href="#!")
+        figure.apartments__gallery-card
+          img(src="@img/image-02.png", alt="gallery image").apartments__gallery-image.img-02
+          figcaption.apartments__gallery-desc Апартаменты “Nice Loft”
+      a(href="#!")
+        figure.apartments__gallery-card
+          img(src="@img/image-03.jpeg", alt="gallery image").apartments__gallery-image
+          figcaption.apartments__gallery-desc Апартаменты “Loft Studio”
+      a(href="#!")
+        figure.apartments__gallery-card
+          img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
+          figcaption.apartments__gallery-desc Loft квартира “Престиж”
 
-  section.request
-    .container
-      h2.request__title Хотите посмотреть?
-      .request__content
-        p.request__content-desc ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.
-        form.request__content-form
-          input(type="text", placeholder="Ваше имя")
-          input(type="text", placeholder="Ваш телефон")
-          span.form-desc *Мы никому не передаем ваши данные. И не сохраняем ваш номер в базу.
-          button(type="submit") Посмотреть район
+  section.cta#cta.container
+    h2.cta__title Хотите посмотреть?
+    .cta__wrapper
+      p.cta__text ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.
+      form.form.cta__form
+        input(type="text", placeholder="Ваше имя").form__input
+        input(type="text", placeholder="Ваш телефон").form__input
+        span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
+        button(type="submit").form__button Посмотреть район
+
+  section.video#video
+    a(href="https://youtu.be/OsENkzlfYFw", data-fancybox).video__link
+      .video__play
+        +svg-icon('play-btn').video__btn
+
+  section.map#map.container
+    h2.map__title Район на карте
+    .map__placeholder
+
+  section.feedback#feedback.container
+    h2.feedback__title Есть вопросы?
+    form.feedback__form
+      span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
+      input(type="text", placeholder="Ваше имя").form__input
+      input(type="text", placeholder="Ваш телефон").form__input
+      button(type="submit").form__button Посмотреть район

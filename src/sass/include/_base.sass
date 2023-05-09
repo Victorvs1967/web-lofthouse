@@ -1,3 +1,4 @@
+@use 'sass:color'
 @import ./vars
 
 *
@@ -21,6 +22,7 @@ body
  font-size: 1.6rem
  background: $dark
  color: $white
+
  &.locked
   overflow: hidden
 
@@ -29,18 +31,20 @@ nav,
 header,
 footer,
 section
-  display: block
+ display: block
 
 button
-  cursor: pointer
+ cursor: pointer
 
 a,
 a:visited,
 a:hover
  text-decoration: none
+
 a
  color: $white
- transition: .2s color ease-in-out
+ transition: 0.2s color ease-in-out
+
  &:hover
   color: $accent
 
@@ -50,29 +54,61 @@ li
 
 h1,
 h2
-  font-family: $font-accent
-  font-weight: 600
-  color: $accent
-h1
-  font-size: 4.8rem
-  line-height: 1.3
-h2
-  font-size: 3.6rem
-  line-height: 1.3
+ font-family: $font-accent
+ font-weight: 600
+ color: $accent
 
+h1
+ font-size: 4.8rem
+ line-height: 1.3
+
+h2
+ font-size: 3.6rem
+ line-height: 1.3
 
 // Container
 .container
-  max-width: $container-width + px
-  width: 100%
-  margin: 0 auto
-  padding: 0 $container-side-padding + px
+ max-width: $container-width + px
+ width: 100%
+ margin: 0 auto
+ padding: 0 ($container-side-padding + px)
+
+// Forms Components
+.form
+  &__input,
+  &__button
+    height: 5rem
+    font-size: 1.6rem
+    transition: .3s background ease-in
+  &__input
+    padding: 1rem
+    background: $input-bg
+    color: $white
+    &::placeholder
+      text-align: center
+      color: $placeholder
+    &:focus
+      background: $input_focus-bg
+      outline: none
+  &__button
+    background: $accent
+    color: $white
+    &:hover
+      background: saturate($accent, 20%)
+  &__privacy
+    display: block
+    font-size: 1.3rem
+    line-height: 1.25
+    text-align: center
+    align-self: center
+    color: $description
 
 @keyframes fade
  0%
   opacity: 0
+
  100%
   opacity: 1
 
 .hidden
-  display: none
+ display: none

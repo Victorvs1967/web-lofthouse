@@ -4,7 +4,7 @@ import { sendMsg, gallery, carousell } from "./include/func.js";
 // sendMsg();
 
 // picture gallery with Fancybox framework
-// gallery();
+gallery();
 
 // slider with Fancybox framework
 // carousell();
