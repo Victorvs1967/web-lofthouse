@@ -1,4 +1,5 @@
 @use 'sass:color'
+
 @import ./vars
 
 *
@@ -75,33 +76,39 @@ h2
 
 // Forms Components
 .form
-  &__input,
-  &__button
-    height: 5rem
-    font-size: 1.6rem
-    transition: .3s background ease-in
-  &__input
-    padding: 1rem
-    background: $input-bg
-    color: $white
-    &::placeholder
-      text-align: center
-      color: $placeholder
-    &:focus
-      background: $input_focus-bg
-      outline: none
-  &__button
-    background: $accent
-    color: $white
-    &:hover
-      background: saturate($accent, 20%)
-  &__privacy
-    display: block
-    font-size: 1.3rem
-    line-height: 1.25
-    text-align: center
-    align-self: center
-    color: $description
+ &__input,
+ &__button
+  height: 5rem
+  font-size: 1.6rem
+  transition: 0.3s background ease-in
+
+ &__input
+  padding: 1rem
+  background: $input-bg
+  color: $white
+
+  &::placeholder
+   text-align: center
+   color: $placeholder
+
+  &:focus
+   background: $input_focus-bg
+   outline: none
+
+ &__button
+  background: $accent
+  color: $white
+
+  &:hover
+   background: saturate($accent, 20%)
+
+ &__privacy
+  display: block
+  font-size: 1.3rem
+  line-height: 1.25
+  text-align: center
+  align-self: center
+  color: $description
 
 @keyframes fade
  0%
@@ -112,3 +119,20 @@ h2
 
 .hidden
  display: none
+
+.number
+ font-family: $font-accent
+ font-weight: 600
+ font-size: 40rem
+ line-height: 1.33
+ color: $white
+ opacity: 0.02
+.right,
+.left
+  position: absolute
+  top: 0
+  transform: translateX(50%)
+.right
+  right: 0
+.left
+  left: 0
