@@ -1,9 +1,9 @@
 include ./_mixins
 
 header.header#header
-  .container
+  .header__wrapper.container
     .header__top
-      a(href="#!") #[+svg-icon('logo').header__top_logo]
+      a(href="#header") #[+svg-icon('logo').header__top_logo]
       nav.header__top_nav
         ul.header__top_nav_menu
           li #[a(href="#video").header__top_nav_menu-item О комплексе]
@@ -11,9 +11,15 @@ header.header#header
           li #[a(href="#apartments").header__top_nav_menu-item Каталог квартир]
           li #[a(href="#feedback").header__top_nav_menu-item Ипотека]
           li #[a(href="#footer").header__top_nav_menu-item Контакты]
+
+    button.burger-menu__control
+      span.burger__open
+      span.burger__close
+
     .header__title
       h1.header__title-text Жилой комплекс<br/>в историческом центре
       a(href="#benefits") #[+svg-icon('mouse').header__title-icon]
+
     .header__footer
       a(href="#map").header__footer-item.left-text
         +svg-icon('placeholder').header__footer-icon

@@ -1,5 +1,7 @@
 @import ../include/vars
 
+@media (max-width: $breakpoint-1920)
+
 @media (max-width: $breakpoint-1450)
   .container
     max-width: 1200px
@@ -12,6 +14,18 @@
   .container
     max-width: 970px
 
+  .header
+    min-height: unset
+    row-gap: 5rem
+    &__top_nav
+      display: none
+    .burger-menu__control
+      display: block
+
+    &__title
+      &-text
+        padding-bottom: 5rem
+
 @media (max-width: $breakpoint-768)
   .container
     max-width: 768px
@@ -19,3 +33,31 @@
 @media (max-width: $breakpoint-480)
   .container
     max-width: none
+    padding: 2rem
+
+  .header
+    &__top
+      &_logo
+        padding: 0
+        width: 10rem
+        height: 3.8rem
+    &__title
+      &-text
+        font-size: 3.2rem
+    &__footer
+      display: flex
+      flex-direction: column
+      align-items: center
+      gap: 1rem
+      &-item,
+      &-item.left-text
+        justify-content: center
+        gap: .5rem
+      &-text
+        font-size: 1.4rem
+
+
+@media (max-width: $breakpoint-320)
+  .container
+    max-width: none
+    padding: 0

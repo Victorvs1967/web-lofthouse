@@ -1,16 +1,17 @@
 @import ../vars
+@import ../mixins
 
 .header
   min-height: 84rem
   height: 100vh
+  padding-bottom: 7.4rem
   position: relative
   background-image: $header-gradient, url("@img/bg-image.jpeg")
   background-size: cover
   background-repeat: no-repeat
   background-position: center
-  .container
+  &__wrapper
     height: 100%
-    padding-bottom: 7.4rem
     display: flex
     flex-direction: column
     justify-content: space-between
@@ -30,10 +31,32 @@
     &_nav
       &_menu
         display: flex
+        align-items: center
         gap: 4rem
         &-item
           font-size: 1.4rem
           letter-spacing: 0.05em
+
+  .mobile-nav
+    display: flex
+    flex-direction: column
+    justify-content: start
+    align-items: center
+    gap: 6rem
+    padding: 6rem 0
+    position: fixed
+    left: 0
+    right: 0
+    top: 0
+    bottom: 0
+    background: $dark
+    z-index: 10
+    .header__top
+      &_nav
+        display: flex
+        &_menu
+          flex-direction: column
+          gap: 2rem
 
   &__title
     &-text
@@ -72,3 +95,7 @@
       height: 2.1rem
       fill: $white
       transition: 0.3s fill ease-in
+
+  @include burger($white, 3rem, 5rem, 4rem)
+    .burger-menu__control
+      display: none
