@@ -15,7 +15,6 @@ main.main
     figure.benefits__item
       +svg-icon('bicycle').benefits__item-icon
       figcaption.benefits__item-desc 6 км<br/>велодорожек
-    .number.right II
 
   section.apartments#apartments.container
     h2.apartments__title Наши квартиры
@@ -36,7 +35,6 @@ main.main
         figure.apartments__gallery-card
           img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
           figcaption.apartments__gallery-desc Loft квартира “Престиж”
-    .number.left III
 
   section.cta#cta.container
     h2.cta__title Хотите посмотреть?
@@ -48,16 +46,14 @@ main.main
         span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
         button(type="submit").form__button Посмотреть район
 
-  section.video#video
+  section.video#video.container
     a(href="https://youtu.be/OsENkzlfYFw", data-fancybox).video__link
       .video__play
         +svg-icon('play-btn').video__btn
-    .number.right IV
 
   section.map#map.container
     h2.map__title Район на карте
     .map__placeholder
-    .number.left V
 
   section.feedback#feedback.container
     h2.feedback__title Есть вопросы?

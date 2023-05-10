@@ -1,6 +1,8 @@
 @import ../vars
+@import ../mixins
 
 .main
+  overflow: hidden
   .benefits
     max-width: 84rem
     margin: 0 auto
@@ -24,6 +26,10 @@
         width: 8rem
         height: 8rem
         fill: $accent
+    &::after
+      @include decor("II")
+      right: 0
+      transform: translateX(50%)
 
   .apartments
     padding-top: 12rem
@@ -87,6 +93,10 @@
         left: 5rem
         font-size: 2.4rem
         z-index: 10
+    &::before
+      @include decor('III')
+      left: 0
+      transform: translate(-50%, 25%)
 
   .cta
     height: 56rem
@@ -110,6 +120,7 @@
       position: relative
       left: 50%
       transform: translateX(-50%)
+      z-index: 2
       &:hover
         .video__play
           background: $video-gradient-sat, center / cover no-repeat url("@img/bg-video.jpeg")
@@ -132,6 +143,10 @@
       transform: translate(-50%, -50%)
       fill: $accent
       transition: .3s all ease-in
+    &::after
+      @include decor('IV')
+      right: 0
+      transform: translate(50%, 15%)
 
   .map
     padding-top: 18rem
@@ -142,6 +157,10 @@
       width: 100%
       height: 36rem
       background: $map-bg
+    &::before
+      @include decor('V')
+      left: 0
+      transform: translate(-40%, 30%)
 
   .feedback
     padding: 18rem 0
