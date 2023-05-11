@@ -12,3 +12,5 @@ gallery();
 
 // burger menu support
 burgerMenu();
+
+mask('[data-phone-input]')
