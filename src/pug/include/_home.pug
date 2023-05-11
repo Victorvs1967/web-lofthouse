@@ -36,7 +36,7 @@ main.main
           img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
           figcaption.apartments__gallery-desc Loft квартира “Престиж”
 
-  section.cta#cta.hidden_
+  section.cta#cta.hidden
     .container
       h2.cta__title Хотите посмотреть?
       .cta__wrapper
@@ -44,7 +44,7 @@ main.main
         form.form.cta__form
           input(type="text", placeholder="Ваше имя").form__input
           input(type="text", placeholder="Ваш телефон").form__input
-          span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
+          span.form__privacy.cta__form-text *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
           button(type="submit").form__button Посмотреть район
 
   section.video#video.container.hidden
@@ -56,10 +56,10 @@ main.main
     h2.map__title Район на карте
     .map__placeholder
 
-  section.feedback#feedback.container.hidden
+  section.feedback#feedback.container.hidden_
     h2.feedback__title Есть вопросы?
     form.feedback__form
-      span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
+      span.form__privacy.feedback__form-text *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
       input(type="text", placeholder="Ваше имя").form__input
       input(type="text", placeholder="Ваш телефон").form__input
       button(type="submit").form__button Посмотреть район

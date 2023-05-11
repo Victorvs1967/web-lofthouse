@@ -12,6 +12,14 @@
   .container
     max-width: 1160px
 
+  .main
+    .feedback
+      padding: 8rem 3rem
+      &__form
+        grid-template-columns: 1fr 1fr
+        &-text
+          grid-row: 2 / 3
+
   .form
     &__privacy
       font-size: .6em
@@ -56,9 +64,9 @@
         grid-template-columns: 1fr
       &__text
         font-size: .8em
-      &__form
-        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
 
+    .map
+      padding: 8rem 3rem
 
 @media (max-width: $breakpoint-768)
   .container
@@ -66,7 +74,7 @@
 
   .main
     .benefits
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr))
       row-gap: 3rem
       &::after
         display: none
@@ -74,6 +82,21 @@
         gap: 2rem
         &-desc
           font-size: 1.8rem
+
+    .video
+      &__play
+        width: 32rem
+        height: 32rem
+      &__btn
+        width: 8rem
+        height: 8rem
+
+    .feedback
+      padding: 8rem 3rem
+      &__form
+        grid-template-columns: 1fr
+        &-text
+          grid-row: 4 / 5
 
 @media (max-width: $breakpoint-480)
   .container
@@ -110,6 +133,14 @@
           height: 7rem
         &-desc
           font-size: 1.6rem
+
+    .cta
+      &__form
+        grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr))
+        gap: 2rem
+        &-text
+          font-size: .6em
+          grid-row: 4 / 5
 
 @media (max-width: $breakpoint-320)
   .container
