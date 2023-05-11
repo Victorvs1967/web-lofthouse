@@ -2,7 +2,7 @@ include ./_mixins
 
 main.main
 
-  section.benefits#benefits.container
+  section(style="display: none;").benefits#benefits.container
     figure.benefits__item
       +svg-icon('bench').benefits__item-icon
       figcaption.benefits__item-desc Рядом исторические парки&nbsp;и&nbsp;скверы
@@ -16,7 +16,7 @@ main.main
       +svg-icon('bicycle').benefits__item-icon
       figcaption.benefits__item-desc 6 км<br/>велодорожек
 
-  section.apartments#apartments.container
+  section.apartments#apartments.container.hidden
     h2.apartments__title Наши квартиры
     .apartments__gallery
       a(href="#!")
@@ -36,26 +36,27 @@ main.main
           img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
           figcaption.apartments__gallery-desc Loft квартира “Престиж”
 
-  section.cta#cta.container
-    h2.cta__title Хотите посмотреть?
-    .cta__wrapper
-      p.cta__text ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.
-      form.form.cta__form
-        input(type="text", placeholder="Ваше имя").form__input
-        input(type="text", placeholder="Ваш телефон").form__input
-        span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
-        button(type="submit").form__button Посмотреть район
+  section.cta#cta.hidden_
+    .container
+      h2.cta__title Хотите посмотреть?
+      .cta__wrapper
+        p.cta__text ЖК LoftHouse – это проект бизнес-класса, расположенный в центре города, на Наб. реки Фонтанки 10-15. Комплекс предлагает своим жильцам квартиры площадью от 40 до 170 кв. м. В здании будет три секции, в которых разместится всего 56 квартир.
+        form.form.cta__form
+          input(type="text", placeholder="Ваше имя").form__input
+          input(type="text", placeholder="Ваш телефон").form__input
+          span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
+          button(type="submit").form__button Посмотреть район
 
-  section.video#video.container
+  section.video#video.container.hidden
     a(href="https://youtu.be/OsENkzlfYFw", data-fancybox).video__link
       .video__play
         +svg-icon('play-btn').video__btn
 
-  section.map#map.container
+  section.map#map.container.hidden
     h2.map__title Район на карте
     .map__placeholder
 
-  section.feedback#feedback.container
+  section.feedback#feedback.container.hidden
     h2.feedback__title Есть вопросы?
     form.feedback__form
       span.form__privacy *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.

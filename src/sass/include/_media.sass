@@ -1,6 +1,8 @@
 @import ../include/vars
 
 @media (max-width: $breakpoint-1920)
+  .container
+    max-width: 1200px
 
 @media (max-width: $breakpoint-1450)
   .container
@@ -9,6 +11,10 @@
 @media (max-width: $breakpoint-1200)
   .container
     max-width: 1160px
+
+  .form
+    &__privacy
+      font-size: .6em
 
 @media (max-width: $breakpoint-992)
   .container
@@ -26,9 +32,48 @@
       &-text
         padding-bottom: 5rem
 
+  .main
+    .apartments
+      padding-top: 6rem
+      &__title
+        padding-bottom: 4rem
+      &__gallery
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+        &-card
+          &::after
+            top: 1rem
+            bottom: 1rem
+            left: 1rem
+            right: 1rem
+        &-desc
+          left: 3rem
+          bottom: 3rem
+          font-size: 1.8rem
+
+    .cta
+      padding: 8rem 0
+      &__wrapper
+        grid-template-columns: 1fr
+      &__text
+        font-size: .8em
+      &__form
+        grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
+
+
 @media (max-width: $breakpoint-768)
   .container
     max-width: 768px
+
+  .main
+    .benefits
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))
+      row-gap: 3rem
+      &::after
+        display: none
+      &__item
+        gap: 2rem
+        &-desc
+          font-size: 1.8rem
 
 @media (max-width: $breakpoint-480)
   .container
@@ -56,8 +101,26 @@
       &-text
         font-size: 1.4rem
 
+  .main
+    .benefits
+      &__item
+        gap: 2rem
+        &-icon
+          width: 7rem
+          height: 7rem
+        &-desc
+          font-size: 1.6rem
 
 @media (max-width: $breakpoint-320)
   .container
     max-width: none
     padding: 0
+
+  .main
+    .benefits
+      &__item
+        &-icon
+          width: 6rem
+          height: 6rem
+        &-desc
+          font-size: 1.4rem
