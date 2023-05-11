@@ -70,7 +70,7 @@
 
   .footer
     &__wrapper
-      grid-template-columns: repeat(2, 1fr)
+      grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr))
 
 @media (max-width: $breakpoint-768)
   .container
@@ -113,7 +113,6 @@
   .footer
     padding: 4rem 0
     &__wrapper
-      grid-template-columns: 1fr
       a
         text-align: center
     &__nav
