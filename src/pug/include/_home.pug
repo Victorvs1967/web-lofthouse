@@ -2,7 +2,7 @@ include ./_mixins
 
 main.main
 
-  section(style="display: none;").benefits#benefits.container
+  section.benefits#benefits.container
     figure.benefits__item
       +svg-icon('bench').benefits__item-icon
       figcaption.benefits__item-desc Рядом исторические парки&nbsp;и&nbsp;скверы
@@ -16,7 +16,7 @@ main.main
       +svg-icon('bicycle').benefits__item-icon
       figcaption.benefits__item-desc 6 км<br/>велодорожек
 
-  section.apartments#apartments.container.hidden
+  section.apartments#apartments.container
     h2.apartments__title Наши квартиры
     .apartments__gallery
       a(href="#!")
@@ -36,7 +36,7 @@ main.main
           img(src="@img/image-04.jpeg", alt="gallery image").apartments__gallery-image
           figcaption.apartments__gallery-desc Loft квартира “Престиж”
 
-  section.cta#cta.hidden
+  section.cta#cta
     .container
       h2.cta__title Хотите посмотреть?
       .cta__wrapper
@@ -47,16 +47,16 @@ main.main
           span.form__privacy.cta__form-text *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.
           button(type="submit").form__button Посмотреть район
 
-  section.video#video.container.hidden
+  section.video#video.container
     a(href="https://youtu.be/OsENkzlfYFw", data-fancybox).video__link
       .video__play
         +svg-icon('play-btn').video__btn
 
-  section.map#map.container.hidden
+  section.map#map.container
     h2.map__title Район на карте
     .map__placeholder
 
-  section.feedback#feedback.container.hidden_
+  section.feedback#feedback.container
     h2.feedback__title Есть вопросы?
     form.feedback__form
       span.form__privacy.feedback__form-text *Мы никому не передаем ваши данные.<br/>И не сохраняем ваш номер в базу.

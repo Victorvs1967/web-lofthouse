@@ -68,6 +68,10 @@
     .map
       padding: 8rem 3rem
 
+  .footer
+    &__wrapper
+      grid-template-columns: repeat(2, 1fr)
+
 @media (max-width: $breakpoint-768)
   .container
     max-width: 768px
@@ -93,15 +97,37 @@
 
     .feedback
       padding: 8rem 3rem
+      &__title
+        padding-bottom: 6rem
       &__form
         grid-template-columns: 1fr
+        gap: 4rem
         &-text
           grid-row: 4 / 5
+
+@media (max-width: $breakpoint-640)
+  .container
+    max-width: none
+    padding: 2rem
+
+  .footer
+    padding: 4rem 0
+    &__wrapper
+      grid-template-columns: 1fr
+      a
+        text-align: center
+    &__nav
+      &-item
+        text-align: center
+        padding-bottom: 1rem
+    &__socials
+      justify-content: center
+      padding-top: 3rem
+
 
 @media (max-width: $breakpoint-480)
   .container
     max-width: none
-    padding: 2rem
 
   .header
     &__top
@@ -127,6 +153,7 @@
   .main
     .benefits
       &__item
+
         gap: 2rem
         &-icon
           width: 7rem
